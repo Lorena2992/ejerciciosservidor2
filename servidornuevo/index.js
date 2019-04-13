@@ -1,8 +1,9 @@
-import express from 'express';
+const express = require("express");
 const app = express();
 const PORT = 3000;
-//import './routes/api';
-//import './routes/views';
+
+require("./router/api")(app);
+require("./router/views")(app);
 
 function init(){
     console.log('Iniciando instancia de Express ...');

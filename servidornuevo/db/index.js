@@ -1,10 +1,10 @@
-import users from '../resources/users';
+const user = require('../resources/users');
 
-export default {
+module.exports = {
     getUsers: function(){
         return users;
     },
-    getUserById(id){
+    getUserById: function(id){
         return users.filter(user=>user._id===id);
     }
 };
